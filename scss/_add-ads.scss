@@ -1,0 +1,107 @@
+main.addads {
+    padding: 1rem;
+    margin: 3vmax;
+    margin-top: 122px;
+    background: $white;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: drop-shadow(0px 0px 10px rgba(32, 32, 32, 0.25));
+    
+    h1 {
+        @include fontSize(32px, 48px);
+        user-select: none;
+    }
+    
+    form {
+        small {
+            color: $darkblue;
+            @include fontSize(10px, 15px);
+        }
+        
+        label {
+            display: flex;
+            flex-direction: column;
+            @include fontSize(12px, 20px);
+            margin-top: 1rem;
+            
+            input {
+                @include widthSize(250px, 800px);
+                margin-top: 0.5rem;
+                @include fontSize(12px, 20px);
+                color: $black;
+                background: $white;
+                padding: 0.25rem;
+                border-radius: 0.25rem;
+                font-weight: bolder;
+                filter: drop-shadow(0px 0px 10px rgba(32, 32, 32, 0.25));
+            }
+
+            textarea {
+                @include widthSize(250px, 800px);
+                margin-top: 0.5rem;
+                @include fontSize(12px, 20px);
+                color: $black;
+                background: $white;
+                padding: 0.25rem;
+                border-radius: 0.25rem;
+                font-weight: bolder;
+                filter: drop-shadow(0px 0px 10px rgba(32, 32, 32, 0.25));
+                resize: vertical;
+                min-height: 200px;
+            }
+            
+            select {
+                @include widthSize(250px, 800px);
+                margin-top: 0.5rem;
+                @include fontSize(12px, 20px);
+                color: $black;
+                background: $white;
+                padding: 0.25rem;
+                border-radius: 0.25rem;
+                font-weight: bolder;
+                filter: drop-shadow(0px 0px 10px rgba(32, 32, 32, 0.25));
+            }
+            input:focus {
+                outline:none;
+            }
+            textarea:focus {
+               outline:none; 
+            }
+            input:valid {
+                background: rgba(145, 215, 242, 0.5);
+            }
+            input:not(valid) {
+                background: rgba(242, 89, 75, 0.5);
+            }
+            textarea:valid {
+                background: rgba(145, 215, 242, 0.5);
+            }
+            textarea:not(valid) {
+                background: rgba(242, 89, 75, 0.5);
+            }
+            select:valid {
+                background: rgba(145, 215, 242, 0.5);
+            }
+            select:not(valid) {
+                background: rgba(242, 89, 75, 0.5);
+            }
+        }
+        button {
+            border-radius: 5px;
+            @include fontSize(12px, 20px);
+            color: $white;
+            background: $red;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-bottom: 2%;
+            padding-top: 2%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid $red;
+            margin-top: 1rem;
+        }
+    }
+}

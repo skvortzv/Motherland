@@ -1,0 +1,62 @@
+@keyframes mobile-menu {
+    from {
+        width: 0%;
+        height: 0%;
+        opacity: .1;
+    }
+    to {
+        width: 50%;
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes mobile-menu-reverse {
+    from {
+        width: 50%;
+        height: 100%;
+        opacity: 1;
+    }
+    to {
+        width: 0%;
+        height: 0%;
+        opacity: .1;
+    }
+}
+
+@keyframes overflow-translateY-100 {
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
+@keyframes overflow-translateY100 {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes plus {
+    from {
+        transform: scale(0.1);
+        opacity: .1;
+    }
+    
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes plus-reverse {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+    to {
+        transform: scale(0.1);
+        opacity: .1;
+        display: none;
+    }
+}

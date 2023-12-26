@@ -1,0 +1,105 @@
+main.ad {
+    background-size: contain;
+    background-repeat: repeat;
+    display: flex;
+    
+    div.content {
+        backdrop-filter: blur(20px);
+        width: 100vw;
+        padding: 1rem;
+        padding-top: 120px;
+        display: flex;
+        flex-direction: row;
+        word-wrap: break-word;
+        background: rgba( 242, 240, 235, 0.8 );
+        overflow: hidden;
+        min-height: 80vh;
+        
+        div.left {
+            width: 50vw;
+            justify-content: center;
+            padding: 1rem;
+            
+            div.author {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                img {
+                    @include boxSize(48px, 76px);
+                    object-fit: contain;
+                    border-radius: 50%;
+                    background: $black;
+                }
+                
+                div.copytext {
+                    display: flex;
+                    justify-content: flex-end;
+                    
+                    input {
+                        @include fontSize(12px, 20px);
+                        font-family: 'Segoe UI Bold';
+                        background: none;
+                        border: none;
+                    }
+                    input:focus {
+                        outline:none;
+                    }
+                    
+                    img.copy {
+                        background: none;
+                        @include boxSize(8px, 16px);
+                    }
+                }
+                
+                small {
+                    user-select: none;
+                    color: $red;
+                    @include fontSize(10px, 12px);
+                }
+            }
+            
+            h1 {
+                @include fontSize(16px, 40px);
+                color: $black;
+            }
+
+            hr {
+                height: .1px;
+                background: $black;
+                margin-right: 5rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+            
+            p {
+                @include fontSize(12px, 20px);
+            }
+            
+            div.prop {
+                padding: 1rem;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 1rem;
+                
+                p {
+                    font-family: 'Segoe UI Bold';
+                    
+                    img {
+                        @include boxSize(12px, 16px);
+                    }
+                }
+            }
+        }
+        
+        div.right {
+            width: 50vw;
+            height: 50vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: 0 0 100px $white;
+        }
+    }
+}
